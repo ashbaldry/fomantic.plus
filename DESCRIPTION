@@ -1,0 +1,12 @@
+Package: fomantic.plus
+Type: Package
+Title: Add more 'Fomantic UI' components to 'shiny.semantic'
+Version: 0.1.0
+Authors@R: person("Ashley", "Baldry", email = "arbaldry91@gmail.com", role = c("aut", "cre"))
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENCE
+Encoding: UTF-8
+Imports: shiny, shiny.semantic, glue, jsonlite
+Suggests: testthat
+RoxygenNote: 7.1.2
