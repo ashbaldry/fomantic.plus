@@ -1,7 +1,7 @@
 #' Create Fomantic UI Grid
 #'
 #' @description
-#'
+#' Using Fomantic UI's implementation of grid with the use of rows and columns.
 #'
 #' @param ... Other arguments to be added as attributes of the tag (e.g. style, class or childrens etc.)
 #' @param class Additional classes to add to the grid elements

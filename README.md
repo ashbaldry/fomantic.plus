@@ -1,5 +1,9 @@
 ## `fomantic.plus`
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ashbaldry/fomantic.plus/workflows/R-CMD-check/badge.svg)](https://github.com/ashbaldry/fomantic.plus/actions)
+<!-- badges: end -->
+
 An extension to the [`shiny.semantic`](https://github.com/Appsilon/shiny.semantic/) package.
 
 ### Examples
