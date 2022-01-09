@@ -30,7 +30,6 @@ extendShinySemantic <- function() {
 
   shiny::tagList(
     tags$script(src = "fomantic.plus/fomantic-plus.min.js"),
-    tags$link(rel = "stylesheet", type = "text/css", href = "fomantic.plus/fomantic-plus.min.css"),
-    tags$script(src = "fomantic.plus/history.min.js")
+    tags$link(rel = "stylesheet", type = "text/css", href = "fomantic.plus/fomantic-plus.min.css")
   )
 }

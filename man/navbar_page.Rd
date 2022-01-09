@@ -17,7 +17,7 @@ navbar_page(
   window_title = title,
   class = "stackable",
   theme = NULL,
-  enable_hash_state = TRUE,
+  enable_hash_state = FALSE,
   suppress_bootstrap = TRUE
 )
 }

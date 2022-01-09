@@ -34,7 +34,7 @@
 #' browser is less than 768 pixels (useful for viewing on smaller touch screen device)
 #' @param window_title A title to display in the browser's title bar. By default it will be the same as the navbar
 #' title.
-#' @param class Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For optional classes
+#' @param class Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For additional classes
 #' have a look in details
 #' @param theme Theme name or path. Full list of supported themes you will find in
 #' \code{SUPPORTED_THEMES} or at https://semantic-ui-forest.com/themes.
@@ -79,7 +79,7 @@ navbar_page <- function(..., title = "", id = NULL, selected = NULL,
                         head = NULL, header = NULL, footer = NULL,
                         collapsible = FALSE, window_title = title,
                         class = "stackable", theme = NULL,
-                        enable_hash_state = TRUE, suppress_bootstrap = TRUE) {
+                        enable_hash_state = FALSE, suppress_bootstrap = TRUE) {
   tabs <- list(...)
   if (!length(tabs)) stop("No tabs detected")
   position <- match.arg(position)
@@ -117,6 +117,7 @@ navbar_page <- function(..., title = "", id = NULL, selected = NULL,
   semanticPage(
     tags$head(
       extendShinySemantic(),
+      if (enable_hash_state) tags$script(src = "fomantic.plus/history.min.js"),
       head
     ),
     menu_header,

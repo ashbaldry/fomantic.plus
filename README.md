@@ -20,13 +20,13 @@ When updating JS/CSS files, before pushing changes run the following chunks depe
 devtools::install_github("ashbaldry/minifier")
 
 minifier::minifyJSDirectory(
-  "inst/srcjs/full-fomantic", 
+  "inst/srcjs/fomantic-plus", 
   single_file = TRUE,
   minified_dir_name = "inst/srcjs", 
   minified_file_name = "fomantic-plus.min.js"
 )
 minifier::minifyCSSDirectory(
-  "inst/srcjs/full-fomantic", 
+  "inst/srcjs/fomantic-plus", 
   single_file = TRUE,
   minified_dir_name = "inst/srcjs", 
   minified_file_name = "fomantic-plus.min.css"
