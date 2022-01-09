@@ -42,7 +42,7 @@ f_row <- function(..., class = "") {
 #' @export
 f_column <- function(..., class = "") {
   div(
-    class = paste("column"),
+    class = paste(class, "column"),
     ...
   )
 }
