@@ -71,7 +71,7 @@ shiny.semantic::form(
 )
 ```
 
-![](invalid_input.png){alt="Screenshot of app, with error message displayed in a message box under the form" width="500"}
+![](invalid_input.png){alt="Screenshot of app, with error message displayed in a message box under the form" width="100%"}
 
 The form itself looks like any standard form in `{shiny.semantic}`, with an exception that we have included an ID to the form. This is important for the validation to know which form to validate.
 
@@ -84,7 +84,7 @@ If all conditions pass, then the button will enable events to be run server-side
 
 If you would rather have the message next to the wrong input rather than a message box use `inline = TRUE`.
 
-![](invalid_inline_input.png){alt="Screenshot of app, with error message displayed as a tooltip under the inputs" width="500"}
+![](invalid_inline_input.png){alt="Screenshot of app, with error message displayed as a tooltip under the inputs" width="100%"}
 
 ## Validation Rules
 
