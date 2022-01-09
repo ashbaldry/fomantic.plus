@@ -128,7 +128,7 @@
     <span class="op">)</span>
   <span class="op">)</span>
 <span class="op">)</span></code></pre>
-<p><img src="invalid_input.png" alt="Screenshot of app, with error message displayed in a message box under the form" width="500"></p>
+<p><img src="invalid_input.png" alt="Screenshot of app, with error message displayed in a message box under the form" style="width:100.0%"></p>
 <p>The form itself looks like any standard form in <code>{shiny.semantic}</code>, with an exception that we have included an ID to the form. This is important for the validation to know which form to validate.</p>
 <p>The validation above is looking for the following:</p>
 <ul>
@@ -137,7 +137,7 @@
 </ul>
 <p>If all conditions pass, then the button will enable events to be run server-side, otherwise an error message will appear in the UI (as above) telling the user all of the mistakes that have been made. Including a label for each input is important, as this is how the validation messages will return useful messages to the user.</p>
 <p>If you would rather have the message next to the wrong input rather than a message box use <code>inline = TRUE</code>.</p>
-<p><img src="invalid_inline_input.png" alt="Screenshot of app, with error message displayed as a tooltip under the inputs" width="500"></p>
+<p><img src="invalid_inline_input.png" alt="Screenshot of app, with error message displayed as a tooltip under the inputs" style="width:100.0%"></p>
 </div>
 <div class="section level2">
 <h2 id="validation-rules">Validation Rules<a class="anchor" aria-label="anchor" href="#validation-rules"></a>
