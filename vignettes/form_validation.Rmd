@@ -1,0 +1,88 @@
+---
+title: "Form Input Validation with Fomantic UI"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Form Input Validation with Fomantic UI}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+## Overview
+
+Input validation is a key part of shiny applications. If a user is able to add open text input, then it is likely someone will end up entering something that will crash the application. For example incorrectly writing an e-mail address or adding an extra . in a number.
+
+Normally, an application will handle validating the inputs on the server side in R, but it can be cumbersome writing conditions for every possibility and writing an informative message for each potential issue.
+
+Fomantic UI have included a [form validation component](https://fomantic-ui.com/behaviors/form.html) within their framework which easily does the required checks within the UI, meaning little/no work required on your end.
+
+## Basic Usage
+
+To add form validation to a Fomantic UI application:
+
+1. Create a `shiny.semantic::form`, adding a set of inputs and giving the `form` element a unique ID
+
+2. Within `form`, include an extra argument, `form_validation`, using the same ID as the `form` it is in
+
+3. Add a series of `field_validation`, each containing a set of `field_rule`, making sure the IDs match the inputs
+
+4. Any server-side functionality relying on the inputs in the form, replace `reactive(...)` with `eventReactive(input$<form_id>_submit, ...)` (and same with `observe` and `observeEvent`), as the submit button will only run if the form validation is successful
+
+## Example 
+
+Using the [form validation example](https://github.com/ashbaldry/fomantic.plus/inst/examples/form_validation) in the `{fomantic.plus}` package, we can see the following in the UI:
+
+``` {.r ui}
+form(
+  id = "form",
+  h4(class = "ui dividing header", "User Information"),
+  fields(
+    class = "two",
+    field(
+      tags$label("Firstname"),
+      text_input("firstname", value = "", type = "text")
+    ),
+    field(
+      tags$label("Surname"),
+      text_input("surname", value = "", type = "text")
+    )
+  ),
+  field(
+    tags$label("E-Mail Address"),
+    text_input("email", value = "", type = "email")
+  ),
+  field(
+    tags$label("Password"),
+    text_input("password", value = "", type = "password")
+  ),
+  field(
+    tags$label("Confirm Password"),
+    text_input("password_confirm", value = "", type = "password")
+  ),
+  field(
+    tags$label("Age"),
+    text_input("age", value = "", type = "text"),
+  ),
+  field(
+    checkbox_input("confirm", label = "I confirm this information is correct", is_marked = FALSE),
+  )
+)
+```
+
+It looks like any standard form in `{shiny.semantic}`, with an exception that we have included an ID to the form. This is important for the validation to know which form to validate.
+
+## Validation Types
+
+For a list of all available rules, check [Fomantic UI Website](https://fomantic-ui.com/behaviors/form.html#validation-rules)
+
+## Submit Button
+
+The submit button in `form_validation` is just like any other Fomantic UI button, but behaves slightly differently to the standard `shiny.semantic::action_button`. When a normal `action_button` is clicked, then it will always trigger an event on the server-side.
+

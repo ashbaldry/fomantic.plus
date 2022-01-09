@@ -1,6 +1,6 @@
 Package: fomantic.plus
 Type: Package
-Title: Add more 'Fomantic UI' components to 'shiny.semantic'
+Title: Add extra 'Fomantic UI' components to 'shiny.semantic'
 Version: 0.1.0
 Authors@R: person("Ashley", "Baldry", email = "arbaldry91@gmail.com", role = c("aut", "cre"))
 Description: Extend 'shiny.semantic' with extra 'Fomantic UI' components.
@@ -8,5 +8,6 @@ Description: Extend 'shiny.semantic' with extra 'Fomantic UI' components.
 License: MIT + file LICENCE
 Encoding: UTF-8
 Imports: shiny, shiny.semantic, glue, jsonlite
-Suggests: testthat
+Suggests: rmarkdown, knitr, testthat
 RoxygenNote: 7.1.2
+VignetteBuilder: knitr
