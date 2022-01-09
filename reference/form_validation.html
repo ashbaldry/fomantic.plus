@@ -25,6 +25,16 @@
       <ul class="nav navbar-nav"><li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/form_validation.html">Form Input Validation with Fomantic UI</a>
+    </li>
+  </ul></li>
       </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -49,6 +59,7 @@
   <span class="va">...</span>,
   submit_label <span class="op">=</span> <span class="st">"Submit"</span>,
   submit_class <span class="op">=</span> <span class="st">""</span>,
+  include_button <span class="op">=</span> <span class="cn">TRUE</span>,
   inline <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span></code></pre></div>
     </div>
@@ -64,6 +75,10 @@
 value <code>{id}_submit</code>)</p></dd>
 <dt>submit_class</dt>
 <dd><p>Additional classes to give the submission button</p></dd>
+<dt>include_button</dt>
+<dd><p>Logical, should the submit button be included? Defaults to <code>TRUE</code>. If <code>FALSE</code>, a
+<code><a href="https://rdrr.io/pkg/shiny.semantic/man/action_button.html" class="external-link">action_button</a></code> will be required in the form somewhere with
+<code>"submit form-button"</code> included as part of the class in order for the validation to run.</p></dd>
 <dt>inline</dt>
 <dd><p>Logical, do you want the field validation errors as in-line labels (<code>TRUE</code>),
 or in a message box at the bottom of the form (<code>FALSE</code>)?</p></dd>

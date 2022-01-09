@@ -26,6 +26,16 @@ the form submission, whether or not the input meets all specified criteria."><!-
       <ul class="nav navbar-nav"><li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/form_validation.html">Form Input Validation with Fomantic UI</a>
+    </li>
+  </ul></li>
       </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -46,7 +56,7 @@ the form submission, whether or not the input meets all specified criteria.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">field_validation</span><span class="op">(</span><span class="va">id</span>, <span class="va">...</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">field_validation</span><span class="op">(</span><span class="va">id</span>, <span class="va">...</span>, extra_params <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 
 <span class="fu">field_rule</span><span class="op">(</span><span class="va">rule</span>, prompt <span class="op">=</span> <span class="cn">NULL</span>, value <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
     </div>
@@ -57,6 +67,9 @@ the form submission, whether or not the input meets all specified criteria.</p>
 <dd><p>HTML id of the field to be validated</p></dd>
 <dt>...</dt>
 <dd><p>A series of <code>field_rule</code>s that will be applied to the field</p></dd>
+<dt>extra_params</dt>
+<dd><p>A named list of extra parameters that can be added to the field validation. For example
+<code>optional = TRUE</code> means the field will only be checked if non-empty</p></dd>
 <dt>rule</dt>
 <dd><p>The type of rule to be applied. Valid rules are available in Details.</p></dd>
 <dt>prompt</dt>
@@ -75,6 +88,8 @@ field or a label. Once the failure(s) has been rectified, the highlighting will 
 <dt><code>checked</code></dt>
 <dd><p>A checkbox field is checked</p></dd>
 
+<dt><code>email</code>A field is a valid e-mail address</dt>
+<dd><p></p></dd>
 <dt><code>url</code></dt>
 <dd><p>A field is a url</p></dd>
 
