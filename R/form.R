@@ -7,6 +7,9 @@
 #' @param submit_label Label to give the submission button at the end of the form (included in returned UI with input
 #' value \code{\{id\}_submit})
 #' @param submit_class Additional classes to give the submission button
+#' @param include_button Logical, should the submit button be included? Defaults to \code{TRUE}. If \code{FALSE}, a
+#' \code{\link[shiny.semantic]{action_button}} will be required in the form somewhere with
+#' \code{"submit form-button"} included as part of the class in order for the validation to run.
 #' @param inline Logical, do you want the field validation errors as in-line labels (\code{TRUE}),
 #' or in a message box at the bottom of the form (\code{FALSE})?
 #'
@@ -63,7 +66,8 @@
 #' @references \url{https://fomantic-ui.com/behaviors/form.html}
 #'
 #' @export
-form_validation <- function(id, ..., submit_label = "Submit", submit_class = "", inline = FALSE) {
+form_validation <- function(id, ..., submit_label = "Submit", submit_class = "",
+                            include_button = TRUE, inline = FALSE) {
   rules <- list(...)
 
   if (length(rules) == 0) {
@@ -103,10 +107,7 @@ create_form_validation_js <- function(id, rules, inline = FALSE) {
   names(rules) <- vapply(rules, function(x) x$identifier, character(1))
   rules_json <- jsonlite::toJSON(rules, auto_unbox = TRUE)
 
-  glue::glue(
-    "$('#{|id|}').form({fields: {|rules_json|}, inline: {|tolower(inline)|}});",
-    .open = "{|", .close = "|}"
-  )
+  paste0("$('#", id, "').form({fields: ", rules_json, ", inline: ", tolower(inline), "});")
 }
 
 #' Field Validation for Fomantic UI
@@ -119,12 +120,15 @@ create_form_validation_js <- function(id, rules, inline = FALSE) {
 #'
 #' @param id HTML id of the field to be validated
 #' @param ... A series of \code{field_rule}s that will be applied to the field
+#' @param extra_params A named list of extra parameters that can be added to the field validation. For example
+#' \code{optional = TRUE} means the field will only be checked if non-empty
 #'
 #' @details
 #' The following \code{rules} are allowed:
 #' \describe{
 #' \item{\code{empty}}{A field is not empty}
 #' \item{\code{checked}}{A checkbox field is checked}
+#' \item{\code{email}{A field is a valid e-mail address}}
 #' \item{\code{url}}{A field is a url}
 #' \item{\code{integer}}{A field is an integer value or matches an integer range\code{*}}
 #' \item{\code{decimal}}{A field must be a decimal number or matches a decimal range\code{*}}
@@ -168,7 +172,7 @@ create_form_validation_js <- function(id, rules, inline = FALSE) {
 #'
 #' @rdname field_validation
 #' @export
-field_validation <- function(id, ...) {
+field_validation <- function(id, ..., extra_params = NULL) {
   rules <- list(...)
 
   if (length(rules) == 0) {
@@ -179,7 +183,9 @@ field_validation <- function(id, ...) {
     stop("Not all items are of class `field_rule`, use `field_rule` to specify rules.")
   }
 
-  structure(list(identifier = id, rules = rules), class = c("list", "field_validation"))
+  field_rules <- structure(list(identifier = id, rules = rules), class = c("list", "field_validation"))
+  if (!is.null(extra_params)) field_rules <- append(field_rules, extra_params)
+  field_rules
 }
 
 #' @param rule The type of rule to be applied. Valid rules are available in Details.

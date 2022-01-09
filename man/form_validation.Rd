@@ -9,6 +9,7 @@ form_validation(
   ...,
   submit_label = "Submit",
   submit_class = "",
+  include_button = TRUE,
   inline = FALSE
 )
 }
@@ -21,6 +22,10 @@ form_validation(
 value \code{\{id\}_submit})}
 
 \item{submit_class}{Additional classes to give the submission button}
+
+\item{include_button}{Logical, should the submit button be included? Defaults to \code{TRUE}. If \code{FALSE}, a
+\code{\link[shiny.semantic]{action_button}} will be required in the form somewhere with
+\code{"submit form-button"} included as part of the class in order for the validation to run.}
 
 \item{inline}{Logical, do you want the field validation errors as in-line labels (\code{TRUE}),
 or in a message box at the bottom of the form (\code{FALSE})?}

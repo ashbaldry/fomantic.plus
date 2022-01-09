@@ -50,7 +50,7 @@ browser is less than 768 pixels (useful for viewing on smaller touch screen devi
 \item{window_title}{A title to display in the browser's title bar. By default it will be the same as the navbar
 title.}
 
-\item{class}{Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For optional classes
+\item{class}{Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For additional classes
 have a look in details}
 
 \item{theme}{Theme name or path. Full list of supported themes you will find in

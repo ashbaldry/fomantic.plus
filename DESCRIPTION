@@ -7,7 +7,7 @@ Description: Extend 'shiny.semantic' with extra 'Fomantic UI' components.
     Create pages in a format similar to 'shiny', form validation and more.
 License: MIT + file LICENCE
 Encoding: UTF-8
-Imports: shiny, shiny.semantic, glue, jsonlite
+Imports: shiny, shiny.semantic, jsonlite
 Suggests: rmarkdown, knitr, testthat
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
