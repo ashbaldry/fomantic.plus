@@ -128,7 +128,7 @@ create_form_validation_js <- function(id, rules, inline = FALSE) {
 #' \describe{
 #' \item{\code{empty}}{A field is not empty}
 #' \item{\code{checked}}{A checkbox field is checked}
-#' \item{\code{email}{A field is a valid e-mail address}}
+#' \item{\code{email}{A field is a valid e-mail address}
 #' \item{\code{url}}{A field is a url}
 #' \item{\code{integer}}{A field is an integer value or matches an integer range\code{*}}
 #' \item{\code{decimal}}{A field must be a decimal number or matches a decimal range\code{*}}

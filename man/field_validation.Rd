@@ -28,39 +28,7 @@ A field validation assigns a series of rules that have been assigned to a partic
 the form submission, whether or not the input meets all specified criteria.
 }
 \details{
-If it fails, then the field will be highlighted and the failures will either be specified as a message below the
-field or a label. Once the failure(s) has been rectified, the highlighting will disappear.
 
-
-The following \code{rules} are allowed:
-\describe{
-\item{\code{empty}}{A field is not empty}
-\item{\code{checked}}{A checkbox field is checked}
-\item{\code{email}{A field is a valid e-mail address}}
-\item{\code{url}}{A field is a url}
-\item{\code{integer}}{A field is an integer value or matches an integer range\code{*}}
-\item{\code{decimal}}{A field must be a decimal number or matches a decimal range\code{*}}
-\item{\code{number}}{A field is any number or matches a number range\code{*}}
-\item{\code{regExp}}{Matches against a regular expression}
-\item{\code{creditCard}}{A field is a valid credit card\code{**}}
-\item{\code{contains}, \code{doesntContain}}{A field (doesn't) contain text (case insensitive)}
-\item{\code{containsExactly}, \code{doesntContainExactly}}{A field (doesn't) contain text (case sensitive)}
-\item{\code{is}, \code{not}}{A field is (not) a value (case insensitive)}
-\item{\code{isExactly}, \code{notExactly}}{A field is (not) a value (case sensitive)}
-\item{\code{minLength}, \code{exactLength}, \code{maxLength}}{A field is at least/exactly/at most a set length}
-\item{\code{match}, \code{different}}{
-A field should (not) match the value of another validation field. Use the field ID as the value
-}
-\item{\code{minCount}, \code{exactCount}, \code{maxCount}}{
-A multiple select field contains at least/exactly/at most a set number of selections
-}
-}
-
-\code{*} For ranges, include the parameter \code{value = "x..y"}
-where \code{x} is the minimum value and \code{y} is the maximum value.
-Leave either side blank to not have a lower/upper limit
-
-\code{**} Include comma separated string of card providers if required e.g. \code{value = "visa,mastercard"}
 }
 \examples{
 # E-mail validations

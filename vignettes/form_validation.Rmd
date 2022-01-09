@@ -41,7 +41,7 @@ In-depth documentation is available for each form validation function.
 
 Using the [form validation example](https://github.com/ashbaldry/fomantic.plus/inst/examples/form_validation), we can see the following in the UI:
 
-``` {.r ui}
+```
 shiny.semantic::form(
   id = "form",
   h4(class = "ui dividing header", "User Information"),
@@ -71,6 +71,8 @@ shiny.semantic::form(
 )
 ```
 
+![](invalid_input.png){alt="Screenshot of app, with error message displayed in a message box under the form" width="500"}
+
 The form itself looks like any standard form in `{shiny.semantic}`, with an exception that we have included an ID to the form. This is important for the validation to know which form to validate.
 
 The validation above is looking for the following:
@@ -78,9 +80,11 @@ The validation above is looking for the following:
 - The firstname input is not empty
 - The lastname input is not empty **and** does not include the word "test"
 
-If all conditions pass, then the button will enable events to be run server-side, otherwise an error message will appear in the UI telling the user all the mistakes that have been made. Including a label for each input is important, as this is how the validation messages will return useful messages to the user.
+If all conditions pass, then the button will enable events to be run server-side, otherwise an error message will appear in the UI (as above) telling the user all of the mistakes that have been made. Including a label for each input is important, as this is how the validation messages will return useful messages to the user.
 
 If you would rather have the message next to the wrong input rather than a message box use `inline = TRUE`.
+
+![](invalid_inline_input.png){alt="Screenshot of app, with error message displayed as a tooltip under the inputs" width="500"}
 
 ## Validation Rules
 
