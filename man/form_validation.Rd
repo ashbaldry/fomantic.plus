@@ -36,14 +36,8 @@ A form validation behaviour checks data against a set of criteria before passing
 \details{
 In order for the validation to work, the \code{form_validation} must be a direct child of the \code{form}.
 
-There are two ways to control using form inputs on the server side:
-
-\itemize{
-\item{The form id is enabled as an input, and will either be \code{TRUE} or \code{FALSE} depending on the status of
-the form upon the last submission. When the shiny application loads, by default it will be set to \code{FALSE}}
-\item{Alternatively the "Submit" button has an input value of \code{{id}_submit} and will only trigger
-server-side events if all the fields pass validation.}
-}
+The "Submit" button has an input value of \code{\{id\}_submit} and will only trigger
+server-side events if all the fields pass validation.
 
 \strong{NB} If you do not include either form validation input as part of the server-side code
 then the inputs will pass through to the server as if there were no validation.

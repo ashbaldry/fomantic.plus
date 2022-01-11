@@ -10,14 +10,13 @@ navbar_page(
   id = NULL,
   selected = NULL,
   position = c("", "top fixed", "bottom fixed"),
-  head = NULL,
   header = NULL,
   footer = NULL,
   collapsible = FALSE,
   window_title = title,
   class = "stackable",
   theme = NULL,
-  enable_hash_state = FALSE,
+  enable_hash_state = TRUE,
   suppress_bootstrap = TRUE
 )
 }
@@ -38,28 +37,26 @@ overlap.
 \item{"bottom fixed"}{Bottom of page, pinned when scrolling}
 }}
 
-\item{head}{Optional list of tags to be added in \code{tags\$head()}}
-
 \item{header}{Optional list of tags to be added to the top of all \code{tab_panel}s.}
 
 \item{footer}{Optional list of tags to be added to the bottom of all \code{tab_panel}s.}
 
 \item{collapsible}{\code{TRUE} to automatically collapse the navigation elements into a menu when the width of the
-browser is less than 768 pixels (useful for viewing on smaller touch screen device)}
+browser is less than 768 pixels (useful for viewing on smaller touchscreen device)}
 
 \item{window_title}{A title to display in the browser's title bar. By default it will be the same as the navbar
 title.}
 
-\item{class}{Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For additional classes
+\item{class}{Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For optional classes
 have a look in details}
 
 \item{theme}{Theme name or path. Full list of supported themes you will find in
-\code{SUPPORTED_THEMES} or at https://semantic-ui-forest.com/themes.}
+\code{SUPPORTED_THEMES} or at http://semantic-ui-forest.com/themes.}
 
 \item{enable_hash_state}{boolean flag that enables a different hash in the URL for each tab, and creates historical
 events}
 
-\item{suppress_bootstrap}{boolean flag that suppresses bootstrap when turned on}
+\item{suppress_bootstrap}{boolean flag that supresses bootstrap when turned on}
 }
 \description{
 This creates a Fomantic page for use in a Shiny app. It is in the same layout as \code{\link[shiny]{navbarPage}},
@@ -82,8 +79,6 @@ The following classes can be applied to the navbar:
 \item{\code{stackable}} - When the width of the webpage becomes too thin, for example on mobile, the navbar will
 become a stack
 \item{\code{inverted}} - Will create an inverted coloured navbar
-\item{\code{five item}} - Will evenly spread out the menu items (can be any number between one and twelve).
-NB if \code{collapsible = TRUE}, then must include \code{stackable} in the class to behave correctly
 }
 }
 \examples{

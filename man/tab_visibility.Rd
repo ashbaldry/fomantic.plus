@@ -23,7 +23,6 @@ Dynamically show or hide a \code{\link{tab_panel}} or \code{navbar_menu}
 if (interactive()) {
   library(shiny)
   library(shiny.semantic)
-  library(fomantic.plus)
 
   ui <- navbar_page(
     title = "App Title",

@@ -27,20 +27,19 @@
 #' \item{"top fixed"}{Top of page, pinned when scrolling}
 #' \item{"bottom fixed"}{Bottom of page, pinned when scrolling}
 #' }
-#' @param head Optional list of tags to be added in \code{tags\$head()}
 #' @param header Optional list of tags to be added to the top of all \code{tab_panel}s.
 #' @param footer Optional list of tags to be added to the bottom of all \code{tab_panel}s.
 #' @param collapsible \code{TRUE} to automatically collapse the navigation elements into a menu when the width of the
-#' browser is less than 768 pixels (useful for viewing on smaller touch screen device)
+#' browser is less than 768 pixels (useful for viewing on smaller touchscreen device)
 #' @param window_title A title to display in the browser's title bar. By default it will be the same as the navbar
 #' title.
-#' @param class Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For additional classes
+#' @param class Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For optional classes
 #' have a look in details
 #' @param theme Theme name or path. Full list of supported themes you will find in
-#' \code{SUPPORTED_THEMES} or at https://semantic-ui-forest.com/themes.
+#' \code{SUPPORTED_THEMES} or at http://semantic-ui-forest.com/themes.
 #' @param enable_hash_state boolean flag that enables a different hash in the URL for each tab, and creates historical
 #' events
-#' @param suppress_bootstrap boolean flag that suppresses bootstrap when turned on
+#' @param suppress_bootstrap boolean flag that supresses bootstrap when turned on
 #'
 #' @details
 #' The following classes can be applied to the navbar:
@@ -48,8 +47,6 @@
 #' \item{\code{stackable}} - When the width of the webpage becomes too thin, for example on mobile, the navbar will
 #' become a stack
 #' \item{\code{inverted}} - Will create an inverted coloured navbar
-#' \item{\code{five item}} - Will evenly spread out the menu items (can be any number between one and twelve).
-#' NB if \code{collapsible = TRUE}, then must include \code{stackable} in the class to behave correctly
 #' }
 #'
 #' @examples
@@ -76,10 +73,10 @@
 #' @export
 navbar_page <- function(..., title = "", id = NULL, selected = NULL,
                         position = c("", "top fixed", "bottom fixed"),
-                        head = NULL, header = NULL, footer = NULL,
+                        header = NULL, footer = NULL,
                         collapsible = FALSE, window_title = title,
                         class = "stackable", theme = NULL,
-                        enable_hash_state = FALSE, suppress_bootstrap = TRUE) {
+                        enable_hash_state = TRUE, suppress_bootstrap = TRUE) {
   tabs <- list(...)
   if (!length(tabs)) stop("No tabs detected")
   position <- match.arg(position)
@@ -115,22 +112,9 @@ navbar_page <- function(..., title = "", id = NULL, selected = NULL,
   menu_content <- lapply(tabs, navbar_content_creator, selected = selected)
 
   semanticPage(
-    tags$head(
-      extendShinySemantic(),
-      if (enable_hash_state) tags$script(src = "fomantic.plus/history.min.js"),
-      head
-    ),
     menu_header,
-    div(
-      style = body_padding,
-      tags$header(header),
-      tags$main(menu_content),
-      tags$footer(footer)
-    ),
-    title = window_title,
-    theme = theme,
-    suppress_bootstrap = suppress_bootstrap,
-    margin = 0
+    div(style = body_padding, tags$header(header), tags$main(menu_content), tags$footer(footer)),
+    title = window_title, theme = theme, suppress_bootstrap = suppress_bootstrap, margin = 0
   )
 }
 
@@ -142,7 +126,7 @@ navbar_menu_creator <- function(tab, selected = NULL) {
       tags$i(class = "dropdown icon"),
       div(class = "menu", lapply(tab$tabs, navbar_menu_creator, selected = selected)),
       is_menu_item = TRUE,
-      class = "navbar-collapsible-item"
+      class = "navbar-collapisble-item"
     )
     nav_menu[[1]]$attribs$`data-tab` = tab$id
     nav_menu
@@ -264,7 +248,6 @@ tab_panel <- function(title, ..., value = title, icon = NULL, type = "bottom att
 #' if (interactive()) {
 #'   library(shiny)
 #'   library(shiny.semantic)
-#'   library(fomantic.plus)
 #'
 #'   ui <- navbar_page(
 #'     title = "App Title",
@@ -299,44 +282,4 @@ show_tab <- function(session = shiny::getDefaultReactiveDomain(), id, target) {
 hide_tab <- function(session = shiny::getDefaultReactiveDomain(), id, target) {
   menu_id <- session$ns(id)
   session$sendCustomMessage("toggleFomanticNavbarTab", list(id = menu_id, target = target, toggle = "hide"))
-}
-
-#' Change the selected tab
-#'
-#' @description
-#' Change the selected tab on the client
-#'
-#' @param session The \code{session} object passed to function given to \code{shinyServer}.
-#' @param id The id of the navbar object
-#' @param target The tab value to show
-#'
-#' @examples
-#' if (interactive()) {
-#'   library(shiny)
-#'   library(shiny.semantic)
-#'   library(fomantic.plus)
-#'
-#'   ui <- navbar_page(
-#'     title = "App Title",
-#'     id = "navbar",
-#'     tab_panel(
-#'       "Plot",
-#'       action_button("select", "Go to Table"),
-#'       value = "plot"
-#'     ),
-#'     tab_panel("Summary", value = "summary"),
-#'     tab_panel("Table", value = "table")
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'     observeEvent(input$select, update_navbar_page(session, "navbar", "table"))
-#'   }
-#'
-#'   shinyApp(ui, server)
-#' }
-#'
-#' @export
-update_navbar_page <- function(session = shiny::getDefaultReactiveDomain(), id, selected = NULL) {
-  menu_id <- session$ns(id)
-  session$sendInputMessage(menu_id, list(selected = selected))
 }
