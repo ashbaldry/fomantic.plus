@@ -56,7 +56,7 @@
 #'   shinyApp(ui, server)
 #' }
 #'
-#' @seealso \code{\link{field_validation}}
+#' @seealso \code{\link{field_validation}}, \code{\link{form_button}}
 #' @references \url{https://fomantic-ui.com/behaviors/form.html}
 #'
 #' @export

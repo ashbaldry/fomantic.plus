@@ -9,15 +9,25 @@
 
 ### Form Validation
 
+Input validation is an important part of shiny applications, and with `form_validation` you can have (the majority) of the validation done within the UI.
+
+![](vignettes/invalid_inline_input.png)
+
 ### Navbar Page
 
-Similar to `{shiny}` navbarPage, `{fomantic.plus}` includes the ability to create a page with a navbar, along with the options to show/hide tabs, and change to a specific tab on the server-side.
+Similar to `{shiny}`'s navbarPage, `{fomantic.plus}` includes the ability to create a page with a navbar, along with the options to show/hide tabs, and change to a specific tab on the server-side.
 
 Bootstrap UI (`shiny`)             |  Fomantic UI (`fomantic.plus`)
 :-------------------------:|:-------------------------:
 ![](inst/assets/shiny_navbar_page.png)  |  ![](inst/assets/fomantic_navbar_page.png)
 
-### Examples
+## Installation
+
+```r
+devtools::install_github("ashbaldry/fomantic.plus")
+```
+
+## Examples
 
 - [Form Validation](https://github.com/ashbaldry/fomantic.plus/inst/examples/form_validation)
 - [Navbar Page](https://github.com/ashbaldry/fomantic.plus/inst/examples/navbar_page)

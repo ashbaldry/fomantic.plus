@@ -103,7 +103,7 @@ The following rules **do** require a value:
 - `"regExp"` - Matches input against a regular expression
 - `"contains", "doesntContain", "containsExactly", "doesntContainExactly"` - Matches input against a fixed string
 - `"is", "not", "isExactly", "notExactly"` - Matches input exactly against a fixed string
-  - When `"Exactly"` is included, the term is case sensitive
+  - When `"Exactly"` is included, the term is case sensitive, otherwise it is case insensitive
 - `"minLength", "exactLength", "maxLength"` - Checks the number of characters used in an input
 - `"match", "different"` - Matches the input against another input the form
 - `"minCount", "exactCount", "maxCount"` - Checks the number of selections made in a multiple select input
@@ -117,7 +117,28 @@ The validation messages from Fomantic are pretty clear, but if you want to write
 For example if you require a password with a non-word character you might use:
 
 ```
-field_rule("regExp", "Password must contain at least one special character", "\\W")
+field_rule(
+  "regExp", 
+  prompt = "Password must contain at least one special character", 
+  value = "\\W"
+)
+```
+
+There are also some special phrases that can be used for more dynamic prompts:
+
+- `{name}` - 	The current text of a field's label, or if no label available its placeholder text
+- `{identifier}` - The identifier used to match the field
+- `{value}` - The current field value
+- `{ruleValue}` - The value passed to a rule, for example `field_rule("minLength", value = 100)` would set this value to 100
+
+### Example
+
+```
+field_rule(
+  "is", 
+  prompt = "You entered {value}, we were looking for {ruleValue}", 
+  value = "right"
+)
 ```
 
 ## Submit Button

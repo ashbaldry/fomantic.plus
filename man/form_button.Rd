@@ -6,6 +6,20 @@
 \usage{
 form_button(input_id, label, icon = NULL, width = NULL, ...)
 }
+\arguments{
+\item{input_id}{The input slot that will be used to access the value}
+
+\item{label}{The contents of the button, can either be character string or HTML tags}
+
+\item{icon}{An optional \code{\link[shiny.semantic]{icon}} to appear on the button}
+
+\item{width}{Width of the input}
+
+\item{...}{Named attributes to be applied to the button or remaining parameters passed to button, like \code{class}}
+}
 \description{
-Fomantic UI Button
+Creates a button specifically for Fomantic UI forms in order to check all inputs meet validation rules
+}
+\seealso{
+\code{\link{form_validation}}, \code{\link[shiny.semantic]{action_button}}
 }

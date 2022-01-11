@@ -81,5 +81,5 @@ if (interactive()) {
 \url{https://fomantic-ui.com/behaviors/form.html}
 }
 \seealso{
-\code{\link{field_validation}}
+\code{\link{field_validation}}, \code{\link{form_button}}
 }
