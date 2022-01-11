@@ -13,8 +13,9 @@
 
 Similar to `{shiny}` navbarPage, `{fomantic.plus}` includes the ability to create a page with a navbar, along with the options to show/hide tabs, and change to a specific tab on the server-side.
 
-![](inst/assets/shiny_navbar_page.png){alt="Screenshot of shiny Bootstrap UI app, with navbar and sidebar layout containing radio buttons and plot" width="48%"}
-![](inst/assets/fomantic_navbar_page.png){alt="Screenshot of fomantic.plus Fomantic UI app, with navbar and sidebar layout containing radio buttons and plot" width="48%"}
+Bootstrap UI (`shiny`)             |  Fomantic UI (`fomantic.plus`)
+:-------------------------:|:-------------------------:
+![](inst/assets/shiny_navbar_page.png)  |  ![](inst/assets/fomantic_navbar_page.png)
 
 ### Examples
 
