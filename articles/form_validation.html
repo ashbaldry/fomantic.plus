@@ -174,7 +174,7 @@
 <li>
 <code>"is", "not", "isExactly", "notExactly"</code> - Matches input exactly against a fixed string
 <ul>
-<li>When <code>"Exactly"</code> is included, the term is case sensitive</li>
+<li>When <code>"Exactly"</code> is included, the term is case sensitive, otherwise it is case insensitive</li>
 </ul>
 </li>
 <li>
@@ -191,7 +191,31 @@
 </h2>
 <p>The validation messages from Fomantic are pretty clear, but if you want to write a more specific message then that is possible using the <code>prompt</code> argument in <code>field_rule</code>.</p>
 <p>For example if you require a password with a non-word character you might use:</p>
-<pre><code><span class="fu"><a href="../reference/field_validation.html">field_rule</a></span><span class="op">(</span><span class="st">"regExp"</span>, <span class="st">"Password must contain at least one special character"</span>, <span class="st">"\\W"</span><span class="op">)</span></code></pre>
+<pre><code><span class="fu"><a href="../reference/field_validation.html">field_rule</a></span><span class="op">(</span>
+  <span class="st">"regExp"</span>, 
+  prompt <span class="op">=</span> <span class="st">"Password must contain at least one special character"</span>, 
+  value <span class="op">=</span> <span class="st">"\\W"</span>
+<span class="op">)</span></code></pre>
+<p>There are also some special phrases that can be used for more dynamic prompts:</p>
+<ul>
+<li>
+<code>{name}</code> - The current text of a field’s label, or if no label available its placeholder text</li>
+<li>
+<code>{identifier}</code> - The identifier used to match the field</li>
+<li>
+<code>{value}</code> - The current field value</li>
+<li>
+<code>{ruleValue}</code> - The value passed to a rule, for example <code>field_rule("minLength", value = 100)</code> would set this value to 100</li>
+</ul>
+<div class="section level3">
+<h3 id="example-1">Example<a class="anchor" aria-label="anchor" href="#example-1"></a>
+</h3>
+<pre><code><span class="fu"><a href="../reference/field_validation.html">field_rule</a></span><span class="op">(</span>
+  <span class="st">"is"</span>, 
+  prompt <span class="op">=</span> <span class="st">"You entered {value}, we were looking for {ruleValue}"</span>, 
+  value <span class="op">=</span> <span class="st">"right"</span>
+<span class="op">)</span></code></pre>
+</div>
 </div>
 <div class="section level2">
 <h2 id="submit-button">Submit Button<a class="anchor" aria-label="anchor" href="#submit-button"></a>
