@@ -264,6 +264,7 @@ tab_panel <- function(title, ..., value = title, icon = NULL, type = "bottom att
 #' if (interactive()) {
 #'   library(shiny)
 #'   library(shiny.semantic)
+#'   library(fomantic.plus)
 #'
 #'   ui <- navbar_page(
 #'     title = "App Title",
@@ -298,4 +299,44 @@ show_tab <- function(session = shiny::getDefaultReactiveDomain(), id, target) {
 hide_tab <- function(session = shiny::getDefaultReactiveDomain(), id, target) {
   menu_id <- session$ns(id)
   session$sendCustomMessage("toggleFomanticNavbarTab", list(id = menu_id, target = target, toggle = "hide"))
+}
+
+#' Change the selected tab
+#'
+#' @description
+#' Change the selected tab on the client
+#'
+#' @param session The \code{session} object passed to function given to \code{shinyServer}.
+#' @param id The id of the navbar object
+#' @param target The tab value to show
+#'
+#' @examples
+#' if (interactive()) {
+#'   library(shiny)
+#'   library(shiny.semantic)
+#'   library(fomantic.plus)
+#'
+#'   ui <- navbar_page(
+#'     title = "App Title",
+#'     id = "navbar",
+#'     tab_panel(
+#'       "Plot",
+#'       action_button("select", "Go to Table"),
+#'       value = "plot"
+#'     ),
+#'     tab_panel("Summary", value = "summary"),
+#'     tab_panel("Table", value = "table")
+#'   )
+#'
+#'   server <- function(input, output, session) {
+#'     observeEvent(input$select, update_navbar_page(session, "navbar", "table"))
+#'   }
+#'
+#'   shinyApp(ui, server)
+#' }
+#'
+#' @export
+update_navbar_page <- function(session = shiny::getDefaultReactiveDomain(), id, selected = NULL) {
+  menu_id <- session$ns(id)
+  session$sendInputMessage(menu_id, list(selected = selected))
 }
