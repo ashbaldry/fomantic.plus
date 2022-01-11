@@ -31,6 +31,9 @@
     <loc>/reference/fomantic_ui_grid.html</loc>
   </url>
   <url>
+    <loc>/reference/form_button.html</loc>
+  </url>
+  <url>
     <loc>/reference/form_validation.html</loc>
   </url>
   <url>
@@ -47,5 +50,8 @@
   </url>
   <url>
     <loc>/reference/tab_visibility.html</loc>
+  </url>
+  <url>
+    <loc>/reference/update_navbar_page.html</loc>
   </url>
 </urlset>
