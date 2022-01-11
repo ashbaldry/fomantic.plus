@@ -92,12 +92,9 @@ or in a message box at the bottom of the form (<code>FALSE</code>)?</p></dd>
     <div id="details">
     <h2>Details</h2>
     <p>In order for the validation to work, the <code>form_validation</code> must be a direct child of the <code>form</code>.</p>
-<p>There are two ways to control using form inputs on the server side:</p>
-<ul><li><p>The form id is enabled as an input, and will either be <code>TRUE</code> or <code>FALSE</code> depending on the status of
-the form upon the last submission. When the shiny application loads, by default it will be set to <code>FALSE</code></p></li>
-<li><p>Alternatively the "Submit" button has an input value of <code>{id}_submit</code> and will only trigger
-server-side events if all the fields pass validation.</p></li>
-</ul><p><strong>NB</strong> If you do not include either form validation input as part of the server-side code
+<p>The "Submit" button has an input value of <code>{id}_submit</code> and will only trigger
+server-side events if all the fields pass validation.</p>
+<p><strong>NB</strong> If you do not include either form validation input as part of the server-side code
 then the inputs will pass through to the server as if there were no validation.</p>
     </div>
     <div id="references">

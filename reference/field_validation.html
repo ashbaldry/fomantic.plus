@@ -85,9 +85,62 @@ the form submission, whether or not the input meets all specified criteria.</p>
 </dl></div>
     <div id="details">
     <h2>Details</h2>
-    
+    <p>If it fails, then the field will be highlighted and the failures will either be specified as a message below the
+field or a label. Once the failure(s) has been rectified, the highlighting will disappear.</p>
+
+<p>The following <code>rules</code> are allowed:</p><dl><dt><code>empty</code></dt>
+<dd><p>A field is not empty</p></dd>
+
+<dt><code>checked</code></dt>
+<dd><p>A checkbox field is checked</p></dd>
+
+<dt><code>email</code></dt>
+<dd><p>A field is a valid e-mail address</p></dd>
+
+<dt><code>url</code></dt>
+<dd><p>A field is a url</p></dd>
+
+<dt><code>integer</code></dt>
+<dd><p>A field is an integer value or matches an integer range<code>*</code></p></dd>
+
+<dt><code>decimal</code></dt>
+<dd><p>A field must be a decimal number or matches a decimal range<code>*</code></p></dd>
+
+<dt><code>number</code></dt>
+<dd><p>A field is any number or matches a number range<code>*</code></p></dd>
+
+<dt><code>regExp</code></dt>
+<dd><p>Matches against a regular expression</p></dd>
+
+<dt><code>creditCard</code></dt>
+<dd><p>A field is a valid credit card<code>**</code></p></dd>
+
+<dt><code>contains</code>, <code>doesntContain</code></dt>
+<dd><p>A field (doesn't) contain text (case insensitive)</p></dd>
+
+<dt><code>containsExactly</code>, <code>doesntContainExactly</code></dt>
+<dd><p>A field (doesn't) contain text (case sensitive)</p></dd>
+
+<dt><code>is</code>, <code>not</code></dt>
+<dd><p>A field is (not) a value (case insensitive)</p></dd>
+
+<dt><code>isExactly</code>, <code>notExactly</code></dt>
+<dd><p>A field is (not) a value (case sensitive)</p></dd>
+
+<dt><code>minLength</code>, <code>exactLength</code>, <code>maxLength</code></dt>
+<dd><p>A field is at least/exactly/at most a set length</p></dd>
+
+<dt><code>match</code>, <code>different</code></dt>
+<dd><p>A field should (not) match the value of another validation field. Use the field ID as the value</p></dd>
+
+<dt><code>minCount</code>, <code>exactCount</code>, <code>maxCount</code></dt>
+<dd><p>A multiple select field contains at least/exactly/at most a set number of selections</p></dd>
 
 
+</dl><p><code>*</code> For ranges, include the parameter <code>value = "x..y"</code>
+where <code>x</code> is the minimum value and <code>y</code> is the maximum value.
+Leave either side blank to not have a lower/upper limit</p>
+<p><code>**</code> Include comma separated string of card providers if required e.g. <code>value = "visa,mastercard"</code></p>
     </div>
     <div id="references">
     <h2>References</h2>

@@ -68,14 +68,13 @@ where a top level navigation bar exists.</p>
   id <span class="op">=</span> <span class="cn">NULL</span>,
   selected <span class="op">=</span> <span class="cn">NULL</span>,
   position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"top fixed"</span>, <span class="st">"bottom fixed"</span><span class="op">)</span>,
-  head <span class="op">=</span> <span class="cn">NULL</span>,
   header <span class="op">=</span> <span class="cn">NULL</span>,
   footer <span class="op">=</span> <span class="cn">NULL</span>,
   collapsible <span class="op">=</span> <span class="cn">FALSE</span>,
   window_title <span class="op">=</span> <span class="va">title</span>,
   class <span class="op">=</span> <span class="st">"stackable"</span>,
   theme <span class="op">=</span> <span class="cn">NULL</span>,
-  enable_hash_state <span class="op">=</span> <span class="cn">FALSE</span>,
+  enable_hash_state <span class="op">=</span> <span class="cn">TRUE</span>,
   suppress_bootstrap <span class="op">=</span> <span class="cn">TRUE</span>
 <span class="op">)</span></code></pre></div>
     </div>
@@ -96,29 +95,27 @@ overlap.</p><ul><li><p>""Default. Top of page, and goes out of view when scrolli
 <li><p>"top fixed"Top of page, pinned when scrolling</p></li>
 <li><p>"bottom fixed"Bottom of page, pinned when scrolling</p></li>
 </ul></dd>
-<dt>head</dt>
-<dd><p>Optional list of tags to be added in <code>tags\$head()</code></p></dd>
 <dt>header</dt>
 <dd><p>Optional list of tags to be added to the top of all <code>tab_panel</code>s.</p></dd>
 <dt>footer</dt>
 <dd><p>Optional list of tags to be added to the bottom of all <code>tab_panel</code>s.</p></dd>
 <dt>collapsible</dt>
 <dd><p><code>TRUE</code> to automatically collapse the navigation elements into a menu when the width of the
-browser is less than 768 pixels (useful for viewing on smaller touch screen device)</p></dd>
+browser is less than 768 pixels (useful for viewing on smaller touchscreen device)</p></dd>
 <dt>window_title</dt>
 <dd><p>A title to display in the browser's title bar. By default it will be the same as the navbar
 title.</p></dd>
 <dt>class</dt>
-<dd><p>Additional classes to be given to the navbar menu. Defaults to <code>"stackable"</code>. For additional classes
+<dd><p>Additional classes to be given to the navbar menu. Defaults to <code>"stackable"</code>. For optional classes
 have a look in details</p></dd>
 <dt>theme</dt>
 <dd><p>Theme name or path. Full list of supported themes you will find in
-<code>SUPPORTED_THEMES</code> or at https://semantic-ui-forest.com/themes.</p></dd>
+<code>SUPPORTED_THEMES</code> or at http://semantic-ui-forest.com/themes.</p></dd>
 <dt>enable_hash_state</dt>
 <dd><p>boolean flag that enables a different hash in the URL for each tab, and creates historical
 events</p></dd>
 <dt>suppress_bootstrap</dt>
-<dd><p>boolean flag that suppresses bootstrap when turned on</p></dd>
+<dd><p>boolean flag that supresses bootstrap when turned on</p></dd>
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -134,8 +131,6 @@ in <code>shiny.minified = TRUE</code> mode.</p>
 <p>The following classes can be applied to the navbar:</p><ul><li><p><code>stackable</code> - When the width of the webpage becomes too thin, for example on mobile, the navbar will
 become a stack</p></li>
 <li><p><code>inverted</code> - Will create an inverted coloured navbar</p></li>
-<li><p><code>five item</code> - Will evenly spread out the menu items (can be any number between one and twelve).
-NB if <code>collapsible = TRUE</code>, then must include <code>stackable</code> in the class to behave correctly</p></li>
 </ul></div>
 
     <div id="ref-examples">
@@ -148,7 +143,7 @@ NB if <code>collapsible = TRUE</code>, then must include <code>stackable</code> 
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;body style="margin:0;"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;nav&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_obvguutjum" data-hash-history="false"&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_usvawzgetl" data-hash-history="true"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="item"&gt;App Title&lt;/div&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item active item" data-tab="Plot"&gt;Plot&lt;/a&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item item" data-tab="Summary"&gt;Summary&lt;/a&gt;</span>
@@ -180,14 +175,14 @@ NB if <code>collapsible = TRUE</code>, then must include <code>stackable</code> 
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;body style="margin:0;"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;nav&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_luyaztjdde" data-hash-history="false"&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_faooxkutxb" data-hash-history="true"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="item"&gt;App Title&lt;/div&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item active item" data-tab="Plot"&gt;Plot&lt;/a&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item item" data-tab="Icon"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;i class="r project icon"&gt;&lt;/i&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         Icon</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;/a&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="ui dropdown item navbar-collapsible-item dropdown_name_More" data-tab="More"&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="ui dropdown item navbar-collapisble-item dropdown_name_More" data-tab="More"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         More</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;i class="dropdown icon"&gt;&lt;/i&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         &lt;div class="menu"&gt;</span>
