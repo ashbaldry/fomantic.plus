@@ -7,12 +7,12 @@
 darkmode_toggle(label = "Dark Mode", ..., checked = FALSE)
 }
 \arguments{
+\item{label}{Labels to add before and after the toggle. By default "Dark Mode" will appear after
+the toggle}
+
 \item{...}{Tag attributes (named arguments) and children (unnamed arguments)}
 
 \item{checked}{Should the application start off in dark mode?}
-
-\item{pre_label, post_label}{Labels to add before and after the toggle. By default "Dark Mode" will appear after
-the toggle}
 }
 \description{
 Add a toggle to the shiny application that triggers all Fomantic UI elements to become "inverted"

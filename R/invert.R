@@ -3,7 +3,7 @@
 #' @description
 #' Add a toggle to the shiny application that triggers all Fomantic UI elements to become "inverted"
 #'
-#' @param pre_label,post_label Labels to add before and after the toggle. By default "Dark Mode" will appear after
+#' @param label Labels to add before and after the toggle. By default "Dark Mode" will appear after
 #' the toggle
 #' @param ... Tag attributes (named arguments) and children (unnamed arguments)
 #' @param checked Should the application start off in dark mode?
