@@ -19,7 +19,7 @@ Similar to `{shiny}`'s navbarPage, `{fomantic.plus}` includes the ability to cre
 
 Bootstrap UI (`shiny`)             |  Fomantic UI (`fomantic.plus`)
 :-------------------------:|:-------------------------:
-![](inst/assets/shiny_navbar_page.png)  |  ![](inst/assets/fomantic_navbar_page.png)
+![](man/figures/shiny_navbar_page.png)  |  ![](man/figures/fomantic_navbar_page.png)
 
 ### Dark Mode
 
@@ -27,7 +27,7 @@ Using `darkmode_toggle()` will include a toggle in the UI to enable all Fomantic
 
 Light Mode            |  Dark Mode
 :-------------------------:|:-------------------------:
-![](inst/assets/darkmode_light.jpg)  |  ![](inst/assets/darkmode_dark.jpg)
+![](man/figures/darkmode_light.jpg)  |  ![](man/figures/darkmode_dark.jpg)
 
 ## Installation
 
