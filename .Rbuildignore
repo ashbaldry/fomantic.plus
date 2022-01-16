@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^inst/srcjs/.*[^.][^m][^i][^n].js$
 ^\.github$
+dev
