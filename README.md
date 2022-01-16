@@ -21,6 +21,14 @@ Bootstrap UI (`shiny`)             |  Fomantic UI (`fomantic.plus`)
 :-------------------------:|:-------------------------:
 ![](inst/assets/shiny_navbar_page.png)  |  ![](inst/assets/fomantic_navbar_page.png)
 
+### Dark Mode
+
+Using `darkmode_toggle()` will include a toggle in the UI to enable all Fomantic UI elements to change into the "inverted" class, giving the ability to have a light and dark mode application
+
+Light Mode            |  Dark Mode
+:-------------------------:|:-------------------------:
+![](inst/assets/darkmode_light.jpg)  |  ![](inst/assets/darkmode_dark.jpg)
+
 ## Installation
 
 ```r
