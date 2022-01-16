@@ -6,20 +6,17 @@ $(document).ready(function() {
   $('.invert-toggle').checkbox({
     onChecked: () => {
       $('.invert-toggle').checkbox('check');
-      var fui_elements = document.getElementsByClassName('ui');
-      $(fui_elements).addClass('inverted');
+      $('.ui:not(.keep-inverted-state)').addClass('inverted');
     },
     onUnchecked: () => {
       $('.invert-toggle').checkbox('uncheck');
-      var fui_elements = document.getElementsByClassName('ui');
-      $(fui_elements).removeClass('inverted');
+      $('.ui.inverted:not(.keep-inverted-state)').removeClass('inverted');
     }
   });
 
   if (document.getElementsByClassName('invert-toggle').length > 0) {
     if ($('.invert-toggle').checkbox('is checked').every(item => item)) {
-      var fui_elements = document.getElementsByClassName('ui');
-      $(fui_elements).addClass('inverted');
+      $('.ui:not(.keep-inverted-state)').addClass('inverted');
     }
   }
 

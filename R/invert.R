@@ -8,6 +8,10 @@
 #' @param ... Tag attributes (named arguments) and children (unnamed arguments)
 #' @param checked Should the application start off in dark mode?
 #'
+#' @details
+#' To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} tp
+#' maintain them in either standard or inverted.
+#'
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)
@@ -25,7 +29,7 @@
 #'         ),
 #'         fui_el$column(
 #'           fui_el$segment(
-#'             class = "red"
+#'             class = "red keep-inverted-state"
 #'           )
 #'         )
 #'       )
