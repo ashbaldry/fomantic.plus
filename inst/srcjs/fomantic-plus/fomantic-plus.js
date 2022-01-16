@@ -5,18 +5,22 @@ $(document).ready(function() {
 
   $('.invert-toggle').checkbox({
     onChecked: () => {
-      $('.invert-toggle').checkbox('check');
-      $('.ui:not(.keep-inverted-state)').addClass('inverted');
+      $('.checkbox.invert-toggle').checkbox('check');
+      $('.ui:not(.keep-inverted-state,.message)').addClass('inverted');
     },
     onUnchecked: () => {
-      $('.invert-toggle').checkbox('uncheck');
-      $('.ui.inverted:not(.keep-inverted-state)').removeClass('inverted');
+      $('.checkbox.invert-toggle').checkbox('uncheck');
+      $('.ui.inverted:not(.keep-inverted-state,.message)').removeClass('inverted');
     }
   });
 
-  if (document.getElementsByClassName('invert-toggle').length > 0) {
-    if ($('.invert-toggle').checkbox('is checked').every(item => item)) {
-      $('.ui:not(.keep-inverted-state)').addClass('inverted');
+  if (document.getElementsByClassName('checkbox invert-toggle').length > 1) {
+    if ($('.checkbox.invert-toggle').checkbox('is checked').every(item => item)) {
+      $('.ui:not(.keep-inverted-state,.message)').addClass('inverted');
+    }
+  } else {
+    if ($('.checkbox.invert-toggle').checkbox('is checked') === true) {
+      $('.ui:not(.keep-inverted-state,.message)').addClass('inverted');
     }
   }
 

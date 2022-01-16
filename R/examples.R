@@ -23,9 +23,10 @@ runFPlusExample <- function(example = NA, port = getOption("shiny.port"),
                             host = getOption("shiny.host", "127.0.0.1"),
                             display.mode = c("auto", "normal", "showcase")) {
   examples_dir <- system.file("examples", package = "fomantic.plus")
-  example_dir <- normalizePath(file.path(examples_dir, example), winslash = "/", mustWork = TRUE)
+  example_dir <- normalizePath(file.path(examples_dir, example), winslash = "/")
+  if (!file.exists(example_dir)) example_dir <- NULL
 
-  if (is.null(dir)) {
+  if (is.null(example_dir)) {
     if (is.na(example)) {
       errFun <- message
       errMsg <- ""
