@@ -2,23 +2,19 @@
 #'
 #' @description
 #' Create an R object that represents a Fomantic UI Element e.g. segment or container. The contents have remained
-#' as minimal as possible to enable the greatest possibile flexibility.
+#' as minimal as possible to enable the greatest possible flexibility.
 #'
-#' @param ... Tag attributes (named arguments) and children (unnamed arguments).
-#' A named argument with an \code{NA} value is rendered as a boolean attributes (see example).
-#' Children may include any combination of:
-#' \itemize{
-#' \item{Other tags objects}
-#' \item{\code{\link[htmltools]{HTML}()} strings}
-#' \item{\code{\link[htmltools]{htmlDependency}()}s}
-#' \item{Single-element atomic vectors}
-#' \item{\code{list()}s containing any combination of the above}
+#' @details
+#' Most of the elements work just like a standard HTML tag with some pre-defined classes, however there are a few
+#' elements which require a value, and so have an extra argument attached:
+#'
+#' \describe{
+#' \item{\code{emoji}}{FUI Element: \code{emoji} - The string of the emoji name}
+#' \item{\code{country}}{FUI Element: \code{flag} - Either the country name or 2 character ISO code}
+#' \item{\code{icon}}{FUI Element: \code{icon} - The space separated name of the Font Awesome icon}
+#' \item{\code{html_tag}}{FUI Elements: \code{header, list, item} - For certain elements, multiple HTML tags can be used.
+#' The default is set to \code{div}, but can be set to any valid HTML tag.}
 #' }
-#' @param emoji \code{fui_el$emoji} - The string of the emoji name
-#' @param country \code{fui_el$flag} - Wither the country name or 2 character ISO code
-#' @param icon \code{fui_el$icon} - The space separated name of the Font Awesome icon
-#' @param html_tag For certain elements, such as headers and items, multiple HTML tags can be used.
-#' The default is set to \code{div}, but can be set to any valid HTML tag.
 #'
 #' @examples
 #' # List
@@ -42,7 +38,13 @@
 #'   )
 #' )
 #'
-#' @seealso \url{https://fomantic-ui.com} for stlying Fomantic UI elements, \code{\link[htmltools]{builder}}
+#' # Flag
+#' fui_el$flag("fr")
+#'
+#' # Icon
+#' fui_el$icon("exclamation triangle")
+#'
+#' @seealso \url{https://fomantic-ui.com} for styling Fomantic UI elements, \code{\link[htmltools]{builder}}
 #' @export
 fui_el <- list()
 

@@ -8,6 +8,8 @@ ui <- shinyUI(
       extendShinySemantic()
     ),
 
+    darkmode_toggle(),
+
     div(
       class = "ui basic segment grid",
       div(

@@ -54,9 +54,9 @@ darkmode_toggle <- function(label = "Dark Mode", ..., checked = FALSE) {
     fui_el$field(
       div(
         class = "ui toggle checkbox invert-toggle",
+        ...,
         tags$input(type = "checkbox", checked = checked_attr),
-        tags$label(label),
-        ...
+        tags$label(label)
       )
     )
   )
