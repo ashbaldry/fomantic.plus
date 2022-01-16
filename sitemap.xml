@@ -22,19 +22,22 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/darkmode_toggle.html</loc>
+  </url>
+  <url>
     <loc>/reference/extendShinySemantic.html</loc>
   </url>
   <url>
     <loc>/reference/field_validation.html</loc>
   </url>
   <url>
-    <loc>/reference/fomantic_ui_grid.html</loc>
-  </url>
-  <url>
     <loc>/reference/form_button.html</loc>
   </url>
   <url>
     <loc>/reference/form_validation.html</loc>
+  </url>
+  <url>
+    <loc>/reference/fui_el.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
@@ -44,6 +47,9 @@
   </url>
   <url>
     <loc>/reference/navbar_page.html</loc>
+  </url>
+  <url>
+    <loc>/reference/runExample.html</loc>
   </url>
   <url>
     <loc>/reference/tab_panel.html</loc>
