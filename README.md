@@ -1,11 +1,11 @@
+<img src="man/figures/hexsticker.png" align="right" alt="Hex sticker of fomantic.plus package" width="130" />
+
 ## `fomantic.plus`
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ashbaldry/fomantic.plus/workflows/R-CMD-check/badge.svg)](https://github.com/ashbaldry/fomantic.plus/actions)
 [![Codecov test coverage](https://codecov.io/gh/ashbaldry/fomantic.plus/branch/main/graph/badge.svg)](https://codecov.io/gh/ashbaldry/fomantic.plus?branch=main)
 <!-- badges: end -->
-
-<img src="man/figures/hexsticker.png" align="right" alt="Hex sticker of fomantic.plus package" width="130" />
 
 `{fomantic.plus}` contains a series of functions that create elements and perform behaviours from [Fomantic UI](https://fomantic-ui.com/); the package works as an extension to the [`{shiny.semantic}`](https://github.com/Appsilon/shiny.semantic/) package.
 
