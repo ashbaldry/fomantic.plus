@@ -68,6 +68,7 @@ where a top level navigation bar exists.</p>
   id <span class="op">=</span> <span class="cn">NULL</span>,
   selected <span class="op">=</span> <span class="cn">NULL</span>,
   position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"top fixed"</span>, <span class="st">"bottom fixed"</span><span class="op">)</span>,
+  head <span class="op">=</span> <span class="cn">NULL</span>,
   header <span class="op">=</span> <span class="cn">NULL</span>,
   footer <span class="op">=</span> <span class="cn">NULL</span>,
   collapsible <span class="op">=</span> <span class="cn">FALSE</span>,
@@ -95,6 +96,8 @@ overlap.</p><ul><li><p>""Default. Top of page, and goes out of view when scrolli
 <li><p>"top fixed"Top of page, pinned when scrolling</p></li>
 <li><p>"bottom fixed"Bottom of page, pinned when scrolling</p></li>
 </ul></dd>
+<dt>head</dt>
+<dd><p>Optional list of tags to be added to <code>tags$head</code>.</p></dd>
 <dt>header</dt>
 <dd><p>Optional list of tags to be added to the top of all <code>tab_panel</code>s.</p></dd>
 <dt>footer</dt>
@@ -143,7 +146,7 @@ become a stack</p></li>
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;body style="margin:0;"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;nav&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_pgmnwasfqp" data-hash-history="true"&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_bgfwuqbhck" data-hash-history="true"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="item"&gt;App Title&lt;/div&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item active item" data-tab="Plot"&gt;Plot&lt;/a&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item item" data-tab="Summary"&gt;Summary&lt;/a&gt;</span>
@@ -175,7 +178,7 @@ become a stack</p></li>
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;body style="margin:0;"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;nav&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_vbmaizgtvi" data-hash-history="true"&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;div class="ui menu ss-menu navbar-page-menu  stackable" id="navbar_menu_eqwqmaprua" data-hash-history="true"&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;div class="item"&gt;App Title&lt;/div&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item active item" data-tab="Plot"&gt;Plot&lt;/a&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;a class="navbar-collapsible-item item" data-tab="Icon"&gt;</span>
