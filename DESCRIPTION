@@ -13,3 +13,4 @@ Imports: shiny, shiny.semantic, jsonlite
 Suggests: rmarkdown, knitr, testthat
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
+Language: en-GB

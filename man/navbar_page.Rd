@@ -59,7 +59,7 @@ have a look in details}
 \item{enable_hash_state}{boolean flag that enables a different hash in the URL for each tab, and creates historical
 events}
 
-\item{suppress_bootstrap}{boolean flag that supresses bootstrap when turned on}
+\item{suppress_bootstrap}{boolean flag that suppresses bootstrap when turned on}
 }
 \description{
 This creates a Fomantic page for use in a Shiny app. It is in the same layout as \code{\link[shiny]{navbarPage}},
@@ -69,7 +69,7 @@ where a top level navigation bar exists.
 Inside, it uses two crucial options:
 
 (1) \code{shiny.minified} with a logical value, tells whether it should attach min or full
-semnatic css or js (TRUE by default).
+semantic css or js (TRUE by default).
 (2) \code{shiny.custom.semantic} if this option has not NULL character \code{semanticPage}
 takes dependencies from custom css and js files specified in this path
 (NULL by default). Depending on \code{shiny.minified} value the folder should contain

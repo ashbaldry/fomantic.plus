@@ -8,7 +8,7 @@
 #' Inside, it uses two crucial options:
 #'
 #' (1) \code{shiny.minified} with a logical value, tells whether it should attach min or full
-#' semnatic css or js (TRUE by default).
+#' semantic css or js (TRUE by default).
 #' (2) \code{shiny.custom.semantic} if this option has not NULL character \code{semanticPage}
 #' takes dependencies from custom css and js files specified in this path
 #' (NULL by default). Depending on \code{shiny.minified} value the folder should contain
@@ -40,7 +40,7 @@
 #' \code{SUPPORTED_THEMES} or at http://semantic-ui-forest.com/themes.
 #' @param enable_hash_state boolean flag that enables a different hash in the URL for each tab, and creates historical
 #' events
-#' @param suppress_bootstrap boolean flag that supresses bootstrap when turned on
+#' @param suppress_bootstrap boolean flag that suppresses bootstrap when turned on
 #'
 #' @details
 #' The following classes can be applied to the navbar:

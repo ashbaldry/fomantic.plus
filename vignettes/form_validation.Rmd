@@ -93,7 +93,7 @@ There are two types of rule, ones that require a value, and ones that don't requ
 The following rules **do not** require a value:
 
 - `"empty"` - Checks that a certain input is not empty
-- `"checked"` - Checks that a checbox input has been checked
+- `"checked"` - Checks that a checkbox input has been checked
 - `"email", "url", "creditCard"` - Checks that an input is in a specific format
 - `"number", "decimal", "integer"` - Checks that a number is any numeric value. **NB** even though these are numeric values, they must still be `text_input`s
   - Numeric inputs can also check values are within a range, in this case a value is included in the format `"x..y"` where `x` is the minimum value and `y` is the maximum value

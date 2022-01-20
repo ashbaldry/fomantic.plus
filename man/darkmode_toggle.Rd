@@ -18,7 +18,7 @@ the toggle}
 Add a toggle to the shiny application that triggers all Fomantic UI elements to become "inverted"
 }
 \details{
-To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} tp
+To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} to
 maintain them in either standard or inverted.
 }
 \examples{

@@ -9,7 +9,7 @@
 #' @param checked Should the application start off in dark mode?
 #'
 #' @details
-#' To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} tp
+#' To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} to
 #' maintain them in either standard or inverted.
 #'
 #' @examples
