@@ -3,3 +3,4 @@
 ^inst/srcjs/.*[^.][^m][^i][^n].js$
 ^\.github$
 dev
+^CRAN-RELEASE$
