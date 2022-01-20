@@ -27,6 +27,7 @@
 #' \item{"top fixed"}{Top of page, pinned when scrolling}
 #' \item{"bottom fixed"}{Bottom of page, pinned when scrolling}
 #' }
+#' @param head Optional list of tags to be added to \code{tags$head}.
 #' @param header Optional list of tags to be added to the top of all \code{tab_panel}s.
 #' @param footer Optional list of tags to be added to the bottom of all \code{tab_panel}s.
 #' @param collapsible \code{TRUE} to automatically collapse the navigation elements into a menu when the width of the
@@ -73,7 +74,7 @@
 #' @export
 navbar_page <- function(..., title = "", id = NULL, selected = NULL,
                         position = c("", "top fixed", "bottom fixed"),
-                        header = NULL, footer = NULL,
+                        head = NULL, header = NULL, footer = NULL,
                         collapsible = FALSE, window_title = title,
                         class = "stackable", theme = NULL,
                         enable_hash_state = TRUE, suppress_bootstrap = TRUE) {
@@ -112,6 +113,11 @@ navbar_page <- function(..., title = "", id = NULL, selected = NULL,
   menu_content <- lapply(tabs, navbar_content_creator, selected = selected)
 
   semanticPage(
+    tags$head(
+      extendShinySemantic(),
+      if (enable_hash_state) tags$script(src = "fomantic.plus/history.min.js"),
+      head
+    ),
     menu_header,
     div(style = body_padding, tags$header(header), tags$main(menu_content), tags$footer(footer)),
     title = window_title, theme = theme, suppress_bootstrap = suppress_bootstrap, margin = 0

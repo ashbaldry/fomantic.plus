@@ -10,6 +10,7 @@ navbar_page(
   id = NULL,
   selected = NULL,
   position = c("", "top fixed", "bottom fixed"),
+  head = NULL,
   header = NULL,
   footer = NULL,
   collapsible = FALSE,
@@ -36,6 +37,8 @@ overlap.
 \item{"top fixed"}{Top of page, pinned when scrolling}
 \item{"bottom fixed"}{Bottom of page, pinned when scrolling}
 }}
+
+\item{head}{Optional list of tags to be added to \code{tags$head}.}
 
 \item{header}{Optional list of tags to be added to the top of all \code{tab_panel}s.}
 

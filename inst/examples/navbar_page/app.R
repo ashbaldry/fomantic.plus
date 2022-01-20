@@ -11,6 +11,18 @@ ui <- navbar_page(
   tab_panel(
     title = "Content",
     value = "content",
+    addTooltip(
+      fui_el$label(class = "small circular", "?"),
+      "Testing out the popup",
+      position = "bottom left"
+    ),
+    addPopup(
+      fui_el$label(class = "small circular", id = "ds", "?"),
+      "<b><em>Testing out the popup</b></em>",
+      title = "TITTLE",
+      html = FALSE,
+      settings = list(exclusive = TRUE, position = "bottom left")
+    ),
     form(multiple_radio("toggle", "Show Menu Dropdown", c("Yes", "No"), c("show", "hide"), "show"))
   ),
   tab_panel(
