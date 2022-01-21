@@ -92,6 +92,11 @@ value <code>{id}_submit</code>)</p></dd>
 <dd><p>Logical, do you want the field validation errors as in-line labels (<code>TRUE</code>),
 or in a message box at the bottom of the form (<code>FALSE</code>)?</p></dd>
 </dl></div>
+    <div id="value">
+    <h2>Value</h2>
+    <p>A <code>shiny.tag.list</code> containing the inline JS to perform the form validation in the shiny UI.
+If <code>include_button = TRUE</code> then a button will also be included to appear in the UI.</p>
+    </div>
     <div id="details">
     <h2>Details</h2>
     <p>In order for the validation to work, the <code>form_validation</code> must be a direct child of the <code>form</code>.</p>

@@ -56,7 +56,7 @@ is initialised with JS, and can include more functionality"><!-- mathjax --><scr
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Create Fomantic UI Popup</h1>
-    <small class="dont-index">Source: <a href="https://github.com/ashbaldry/fomantic.plus/blob/HEAD/R/tooltip.R" class="external-link"><code>R/tooltip.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/ashbaldry/fomantic.plus/blob/HEAD/R/popup.R" class="external-link"><code>R/popup.R</code></a></small>
     <div class="hidden name"><code>popup.Rd</code></div>
     </div>
 
@@ -115,6 +115,12 @@ For example <code>list(on = "click")</code> will mean the popup appears on a cli
 <dt>html</dt>
 <dd><p>Is <code>text</code> valid HTML code? Defaults to <code>FALSE</code></p></dd>
 </dl></div>
+    <div id="value">
+    <h2>Value</h2>
+    <p><code>addTooltip</code> will return <code>el</code> with extra attributes added to the top level tag.
+<code>addPopup</code> will return a <code>shiny.tag.list</code>, first similar to <code>addTooltip</code> an updated
+version of <code>el</code>. Then a small JS script has been added to enable the popup.</p>
+    </div>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p><a href="https://fomantic-ui.com/modules/popup.html" class="external-link">https://fomantic-ui.com/modules/popup.html</a></p></div>
