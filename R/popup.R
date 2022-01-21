@@ -23,7 +23,11 @@
 #' For example \code{list(on = "click")} will mean the popup appears on a click rather than a hover.
 #' @param html Is \code{text} valid HTML code? Defaults to \code{FALSE}
 #'
-#' @seealso \url{https://fomantic-ui.com/modules/popup.html}
+#' @return
+#' \code{addTooltip} will return \code{el} with extra attributes added to the top level tag.
+#'
+#' \code{addPopup} will return a \code{shiny.tag.list}, first similar to \code{addTooltip} an updated
+#' version of \code{el}. Then a small JS script has been added to enable the popup.
 #'
 #' @examples
 #' addPopup(
@@ -36,6 +40,8 @@
 #'   fui_el$label(class = "small circular", "?"),
 #'   "This can be used as a help icon in a shiny app"
 #' )
+#'
+#' @seealso \url{https://fomantic-ui.com/modules/popup.html}
 #'
 #' @rdname popup
 #' @export

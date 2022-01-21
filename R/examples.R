@@ -6,7 +6,9 @@
 #' @param host The IPv4 address that the application should listen on. Defaults to the shiny.host option, if set, or "127.0.0.1" if not.
 #' @param display.mode The mode in which to display the example. Defaults to \code{showcase}, but may be set to normal to see the example without code or commentary.
 #'
-#' @seealso \code{\link[shiny]{runExample}}
+#' @return
+#' If \code{example = NA} then a list of the available examples will be shown, otherwise the selected
+#' application will be rendered.
 #'
 #' @examples
 #' if (interactive()) {
@@ -15,6 +17,8 @@
 #'   # Fomantic UI Kitchen Sink
 #'   runKitchenSink()
 #' }
+#'
+#' @seealso \code{\link[shiny]{runExample}}
 #'
 #' @rdname runExample
 #' @export

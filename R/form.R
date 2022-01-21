@@ -13,6 +13,11 @@
 #' @param inline Logical, do you want the field validation errors as in-line labels (\code{TRUE}),
 #' or in a message box at the bottom of the form (\code{FALSE})?
 #'
+#' @return
+#' A \code{shiny.tag.list} containing the inline JS to perform the form validation in the shiny UI.
+#'
+#' If \code{include_button = TRUE} then a button will also be included to appear in the UI.
+#'
 #' @details
 #' In order for the validation to work, the \code{form_validation} must be a direct child of the \code{form}.
 #'
@@ -116,6 +121,9 @@ create_form_validation_js <- function(id, rules, inline = FALSE) {
 #' @param ... A series of \code{field_rule}s that will be applied to the field
 #' @param extra_params A named list of extra parameters that can be added to the field validation. For example
 #' \code{optional = TRUE} means the field will only be checked if non-empty
+#'
+#' @return
+#' A structured list of the \code{field_rules} that can be recognised by \code{\link{form_validation}}.
 #'
 #' @details
 #' The following \code{rules} are allowed:

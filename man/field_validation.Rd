@@ -23,6 +23,9 @@ field_rule(rule, prompt = NULL, value = NULL)
 
 \item{value}{Certain fields require a value to check validation. Check Details if the \code{rule} requires a value.}
 }
+\value{
+A structured list of the \code{field_rules} that can be recognised by \code{\link{form_validation}}.
+}
 \description{
 A field validation assigns a series of rules that have been assigned to a particular input and checks, upon
 the form submission, whether or not the input meets all specified criteria.

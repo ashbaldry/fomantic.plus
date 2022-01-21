@@ -17,8 +17,15 @@ form_button(input_id, label, icon = NULL, width = NULL, ...)
 
 \item{...}{Named attributes to be applied to the button or remaining parameters passed to button, like \code{class}}
 }
+\value{
+A \code{shiny.tag} that will show a submit button in the UI of a shiny application.
+}
 \description{
 Creates a button specifically for Fomantic UI forms in order to check all inputs meet validation rules
+}
+\examples{
+form_button("submit", "Submit")
+
 }
 \seealso{
 \code{\link{form_validation}}, \code{\link[shiny.semantic]{action_button}}

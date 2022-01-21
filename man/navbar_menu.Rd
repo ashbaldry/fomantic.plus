@@ -17,6 +17,9 @@ or "----" as a horizontal separator.}
 \item{icon}{Optional icon to appear on the tab.
 This attribute is only valid when using a \code{tab_panel} within a \code{\link{navbar_page}}.}
 }
+\value{
+A structured list of class \code{ssnavmenu}, that can be used in \code{\link{navbar_page}}.
+}
 \description{
 Create a dropdown menu for a \code{\link{navbar_page}}.
 }

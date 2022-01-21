@@ -6,6 +6,9 @@
 \usage{
 extendShinySemantic()
 }
+\value{
+A \code{shiny.tag.list} containing tags to enable the JS and CSS required for this package.
+}
 \description{
 In order for any of the \code{fomantic.plus} functionality to work
 

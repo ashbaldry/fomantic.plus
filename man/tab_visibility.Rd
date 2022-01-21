@@ -16,6 +16,9 @@ hide_tab(session = shiny::getDefaultReactiveDomain(), id, target)
 
 \item{target}{The tab value to toggle visibility}
 }
+\value{
+Changes to the visibility of a tab in the shiny UI.
+}
 \description{
 Dynamically show or hide a \code{\link{tab_panel}} or \code{navbar_menu}
 }

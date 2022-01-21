@@ -9,6 +9,12 @@
 #' @param width Width of the input
 #' @param ... Named attributes to be applied to the button or remaining parameters passed to button, like \code{class}
 #'
+#' @return
+#' A \code{shiny.tag} that will show a submit button in the UI of a shiny application.
+#'
+#' @examples
+#' form_button("submit", "Submit")
+#'
 #' @seealso \code{\link{form_validation}}, \code{\link[shiny.semantic]{action_button}}
 #' @export
 form_button <- function(input_id, label, icon = NULL, width = NULL, ...) {

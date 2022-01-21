@@ -30,6 +30,11 @@ value \code{\{id\}_submit})}
 \item{inline}{Logical, do you want the field validation errors as in-line labels (\code{TRUE}),
 or in a message box at the bottom of the form (\code{FALSE})?}
 }
+\value{
+A \code{shiny.tag.list} containing the inline JS to perform the form validation in the shiny UI.
+
+If \code{include_button = TRUE} then a button will also be included to appear in the UI.
+}
 \description{
 A form validation behaviour checks data against a set of criteria before passing it along to the server.
 }

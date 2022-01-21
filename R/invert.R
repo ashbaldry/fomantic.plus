@@ -8,6 +8,9 @@
 #' @param ... Tag attributes (named arguments) and children (unnamed arguments)
 #' @param checked Should the application start off in dark mode?
 #'
+#' @return
+#' A \code{shiny.tag} that will provide a toggle style checkbox in the UI of a shiny application.
+#'
 #' @details
 #' To prevent elements from becoming inverted/removing their inverted state, include \code{keep-inverted-state} to
 #' maintain them in either standard or inverted.

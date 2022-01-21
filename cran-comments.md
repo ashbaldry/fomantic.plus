@@ -11,4 +11,5 @@
 
 ## Notes
 
-I have updated all of the URLs to use https and return 200
+- Value tags have been added to all functions
+- I have updated all of the URLs to use https and return 200

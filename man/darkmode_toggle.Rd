@@ -14,6 +14,9 @@ the toggle}
 
 \item{checked}{Should the application start off in dark mode?}
 }
+\value{
+A \code{shiny.tag} that will provide a toggle style checkbox in the UI of a shiny application.
+}
 \description{
 Add a toggle to the shiny application that triggers all Fomantic UI elements to become "inverted"
 }

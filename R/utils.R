@@ -10,6 +10,9 @@ NULL
 #' This will be automatically included in any \code{xxx_page} function in this package,
 #' for example \code{\link{navbar_page}}.
 #'
+#' @return
+#' A \code{shiny.tag.list} containing tags to enable the JS and CSS required for this package.
+#'
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)

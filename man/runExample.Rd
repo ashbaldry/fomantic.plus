@@ -23,6 +23,10 @@ runFPlusExample(
 
 \item{display.mode}{The mode in which to display the example. Defaults to \code{showcase}, but may be set to normal to see the example without code or commentary.}
 }
+\value{
+If \code{example = NA} then a list of the available examples will be shown, otherwise the selected
+application will be rendered.
+}
 \description{
 Run Fomantic Plus Examples
 }

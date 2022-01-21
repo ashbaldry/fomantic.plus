@@ -42,6 +42,9 @@
 #' events
 #' @param suppress_bootstrap boolean flag that suppresses bootstrap when turned on
 #'
+#' @return
+#' A \code{shiny.tag.list} containing the UI for a shiny application.
+#'
 #' @details
 #' The following classes can be applied to the navbar:
 #' \itemize{
@@ -190,6 +193,9 @@ get_first_tab <- function(tabs, i = 1) {
 #' @param icon Optional icon to appear on the tab.
 #' This attribute is only valid when using a \code{tab_panel} within a \code{\link{navbar_page}}.
 #'
+#' @return
+#' A structured list of class \code{ssnavmenu}, that can be used in \code{\link{navbar_page}}.
+#'
 #' @examples
 #' navbar_menu(
 #'   "Menu",
@@ -249,6 +255,9 @@ tab_panel <- function(title, ..., value = title, icon = NULL, type = "bottom att
 #' @param session The \code{session} object passed to function given to \code{shinyServer}.
 #' @param id The id of the navbar object
 #' @param target The tab value to toggle visibility
+#'
+#' @return
+#' Changes to the visibility of a tab in the shiny UI.
 #'
 #' @examples
 #' if (interactive()) {

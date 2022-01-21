@@ -61,6 +61,9 @@ events}
 
 \item{suppress_bootstrap}{boolean flag that suppresses bootstrap when turned on}
 }
+\value{
+A \code{shiny.tag.list} containing the UI for a shiny application.
+}
 \description{
 This creates a Fomantic page for use in a Shiny app. It is in the same layout as \code{\link[shiny]{navbarPage}},
 where a top level navigation bar exists.
