@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ashbaldry/fomantic.plus/workflows/R-CMD-check/badge.svg)](https://github.com/ashbaldry/fomantic.plus/actions)
-[![codecov](https://app.codecov.io/gh/ashbaldry/fomantic.plus/branch/main/graph/badge.svg?token=RPQS1TQQL0)](https://app.codecov.io/gh/ashbaldry/fomantic.plus)
+[![codecov](https://codecov.io/gh/ashbaldry/fomantic.plus/branch/main/graph/badge.svg?token=RPQS1TQQL0)](https://app.codecov.io/gh/ashbaldry/fomantic.plus)
 <!-- badges: end -->
 
 `{fomantic.plus}` contains a series of functions that create elements and perform behaviours from [Fomantic UI](https://fomantic-ui.com/); the package works as an extension to the [`{shiny.semantic}`](https://github.com/Appsilon/shiny.semantic/) package.
