@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ashbaldry/fomantic.plus/workflows/R-CMD-check/badge.svg)](https://github.com/ashbaldry/fomantic.plus/actions)
-[![Codecov test coverage](https://codecov.io/gh/ashbaldry/fomantic.plus/branch/main/graph/badge.svg)](https://codecov.io/gh/ashbaldry/fomantic.plus?branch=main)
+[![Codecov test coverage](https://app.codecov.io/gh/ashbaldry/fomantic.plus/branch/main/graph/badge.svg)](https://codecov.io/gh/ashbaldry/fomantic.plus?branch=main)
 <!-- badges: end -->
 
 `{fomantic.plus}` contains a series of functions that create elements and perform behaviours from [Fomantic UI](https://fomantic-ui.com/); the package works as an extension to the [`{shiny.semantic}`](https://github.com/Appsilon/shiny.semantic/) package.
@@ -39,5 +39,5 @@ devtools::install_github("ashbaldry/fomantic.plus")
 
 ## Examples
 
-- [Form Validation](https://github.com/ashbaldry/fomantic.plus/inst/examples/form_validation)
-- [Navbar Page](https://github.com/ashbaldry/fomantic.plus/inst/examples/navbar_page)
+- [Form Validation](https://github.com/ashbaldry/fomantic.plus/tree/main/inst/examples/form_validation)
+- [Navbar Page](https://github.com/ashbaldry/fomantic.plus/tree/main/inst/examples/navbar_page)
