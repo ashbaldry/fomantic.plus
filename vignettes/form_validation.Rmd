@@ -39,7 +39,7 @@ In-depth documentation is available for each form validation function.
 
 ## Example 
 
-Using the [form validation example](https://github.com/ashbaldry/fomantic.plus/inst/examples/form_validation), we can see the following in the UI:
+Using the [form validation example](https://github.com/ashbaldry/fomantic.plus/tree/main/inst/examples/form_validation), we can see the following in the UI:
 
 ```
 shiny.semantic::form(

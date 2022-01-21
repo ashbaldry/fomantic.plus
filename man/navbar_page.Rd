@@ -54,7 +54,7 @@ title.}
 have a look in details}
 
 \item{theme}{Theme name or path. Full list of supported themes you will find in
-\code{SUPPORTED_THEMES} or at http://semantic-ui-forest.com/themes.}
+\code{SUPPORTED_THEMES} or at https://semantic-ui-forest.com/themes.}
 
 \item{enable_hash_state}{boolean flag that enables a different hash in the URL for each tab, and creates historical
 events}

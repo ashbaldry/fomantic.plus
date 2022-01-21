@@ -37,7 +37,7 @@
 #' @param class Additional classes to be given to the navbar menu. Defaults to \code{"stackable"}. For optional classes
 #' have a look in details
 #' @param theme Theme name or path. Full list of supported themes you will find in
-#' \code{SUPPORTED_THEMES} or at http://semantic-ui-forest.com/themes.
+#' \code{SUPPORTED_THEMES} or at https://semantic-ui-forest.com/themes.
 #' @param enable_hash_state boolean flag that enables a different hash in the URL for each tab, and creates historical
 #' events
 #' @param suppress_bootstrap boolean flag that suppresses bootstrap when turned on
