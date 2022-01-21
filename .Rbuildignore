@@ -4,3 +4,4 @@
 ^\.github$
 dev
 ^CRAN-RELEASE$
+^cran-comments\.md$
