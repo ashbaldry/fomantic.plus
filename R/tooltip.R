@@ -41,6 +41,7 @@
 #' @export
 addPopup <- function(el, text, position = NULL, variation = NULL, inverted = FALSE,
                      title = NULL, offset = NULL, settings = NULL, html = FALSE) {
+  if (!inherits(el, "shiny.tag")) stop("el must be a shiny.tag")
   if (!"id" %in% names(el$attribs)) stop("addPopup requires HTML tag to have an id to run")
 
   if (html) {
@@ -51,11 +52,11 @@ addPopup <- function(el, text, position = NULL, variation = NULL, inverted = FAL
   }
 
   el$attribs[[tooltip_attribute]] <- as.character(text)
-  if (!is.null(title)) el$attribs[["data-title"]] <- title
-  if (!is.null(position)) el$attribs[["data-position"]] <- position
-  if (!is.null(variation)) el$attribs[["data-variation"]] <- variation
-  if (!is.null(offset)) el$attribs[["data-offset"]] <- as.character(offset)
-  if (inverted) el$attribs[["data-inverted"]] <- ""
+  if (!is.null(title)) el <- htmltools::tagAppendAttributes(el, "data-title" = title)
+  if (!is.null(position)) el <- htmltools::tagAppendAttributes(el, "data-position" = position)
+  if (!is.null(variation)) el <- htmltools::tagAppendAttributes(el, "data-variation" = variation)
+  if (!is.null(offset)) el <- htmltools::tagAppendAttributes(el, "data-offset" = as.character(offset))
+  if (inverted) el <- htmltools::tagAppendAttributes(el, "data-inverted" = "")
 
   if (is.null(settings)) {
     settings_json <- ""
@@ -71,11 +72,13 @@ addPopup <- function(el, text, position = NULL, variation = NULL, inverted = FAL
 
 #' @rdname popup
 #' @export
-addTooltip  <- function(el, text, position = NULL, variation = NULL, inverted = FALSE, html = FALSE) {
-  el$attribs[["data-tooltip"]] <- as.character(text)
-  if (!is.null(position)) el$attribs[["data-position"]] <- position
-  if (!is.null(variation)) el$attribs[["data-variation"]] <- variation
-  if (inverted) el$attribs[["data-inverted"]] <- ""
+addTooltip  <- function(el, text, position = NULL, variation = NULL, inverted = FALSE) {
+  if (!inherits(el, "shiny.tag")) stop("el must be a shiny.tag")
+
+  el <- htmltools::tagAppendAttributes(el, "data-tooltip" = as.character(text))
+  if (!is.null(position)) el <- htmltools::tagAppendAttributes(el, "data-position" = position)
+  if (!is.null(variation)) el <- htmltools::tagAppendAttributes(el, "data-variation" = variation)
+  if (inverted) el <- htmltools::tagAppendAttributes(el, "data-inverted" = "")
 
   el
 }

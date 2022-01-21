@@ -17,14 +17,7 @@ addPopup(
   html = FALSE
 )
 
-addTooltip(
-  el,
-  text,
-  position = NULL,
-  variation = NULL,
-  inverted = FALSE,
-  html = FALSE
-)
+addTooltip(el, text, position = NULL, variation = NULL, inverted = FALSE)
 }
 \arguments{
 \item{el}{A UI element that the tooltip will be applied to}
